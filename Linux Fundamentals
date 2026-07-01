@@ -1,0 +1,94 @@
+# 🐧 My Linux Fundamentals Journey
+
+I have started learning Linux fundamentals, and this repository is my personal log. I have documented everything exactly how I understood it—keeping it simple, practical, and crash-course style!
+
+---
+
+## 🏛️ 1. History of Linux (Introduction)
+
+### What is Unix?
+* Unix is the oldest and most historic Operating System (developed in 1970 at AT&T's Bell Labs).
+* It is literally the **"ancestor"** of modern operating systems like Linux and macOS.
+* It is **Closed Source** (commercial companies own it and sell its license).
+
+### What is Linux? (The Big Myth)
+* **The biggest fact:** Linux is NOT a complete Operating System! Technically, it is just a **Kernel** (the main core engine of an OS).
+* It was first released by **Linus Torvalds** on **September 17, 1991**.
+* **Linux-Based OS (Distros):** When you combine the Linux kernel with other tools and a graphical interface, it becomes a full OS called a *Distribution (Distro)*.
+  * **Ubuntu:** Super beginner-friendly and lightweight. It can easily run on just **512MB of RAM**! (Way lighter than Windows).
+  * **Kali Linux:** Specifically built for ethical hacking and penetration testing, packed with pre-installed tools.
+
+---
+
+## ⚙️ 2. Under the Hood: Linux vs Windows
+
+Every OS relies on its core engine, known as the Kernel:
+
+* **Linux (Monolithic Kernel):** All major tasks and hardware drivers run directly inside the kernel space, making it super-fast and lightweight. Plus, it is **Open Source**—thousands of developers inspect the code daily, meaning security bugs get patched within hours.
+* **Windows (NT Kernel):** NT stands for *New Technology*. It uses a **Hybrid Kernel**, which is heavier and demands more RAM to run smoothly. It is closed source (only Microsoft has the code).
+
+---
+
+## 💻 3. Complete CLI Cheat-Sheet (Navigation, Search, Redirection & Operators)
+Here is the entire breakdown of every command and operator I practiced, compiled together into a single execution guide:
+
+# ==========================================
+# PART A: DIRECTORY NAVIGATION & BASIC CLI
+# ==========================================
+
+# Print Working Directory: Tells me exactly which folder I am standing in right now.
+pwd
+# Output example: /home/user/Documents
+
+# List: Displays all files and folders in the current directory.
+ls
+ls -la        # The '-la' flag reveals hidden files along with detailed permissions.
+
+# Change Directory: Used to jump between folders.
+cd Documents  # Moves into the Documents directory.
+cd ..         # Moves one step backward to the parent directory.
+cd ~          # Takes me straight back to the user's Home directory.
+
+# Concatenate: Outputs the text content of a file directly onto the terminal screen.
+cat notes.txt
+
+
+# ==========================================
+# PART B: ADVANCED SEARCHING & COUNTING
+# ==========================================
+
+# Find: Used specifically to locate a file or directory by its NAME.
+find . -name "my_file.txt"     # Searches the current folder ('.') and all sub-folders.
+
+# Grep: Used specifically to search for a string of TEXT INSIDE a file's content.
+grep "error" server.log        # Prints every line containing the word "error" inside server.log.
+
+# Recursive Grep: Automatically crawls through a main folder, its sub-folders, and scans every single file.
+grep -r "todo" /home/projects/ # Checks all project files recursively for the text "todo".
+
+# Word Count (with Piping): Uses the pipe (|) operator to send cat's output into wc to count data.
+cat notes.txt | wc -l          # Counts and prints the total number of lines in the file.
+cat notes.txt | wc -w          # Counts and prints the total number of words in the file.
+
+
+# ==========================================
+# PART C: OPERATORS, REDIRECTION & TRICKS
+# ==========================================
+
+# Background Execution (&): Runs a heavy or time-consuming task in the background, keeping the CLI free.
+sleep 100 &
+
+# Logical AND (&&): Conditional execution. Command 2 runs ONLY IF Command 1 completes successfully.
+mkdir test_folder && cd test_folder
+
+# Overwrite Redirection (>): Sends output to a file, completely wiping out its existing content first.
+echo "sam" > file1.txt
+
+# Append Redirection (>>): Sends output to a file, adding the text to the bottom without touching existing data.
+echo "ram" >> file1.txt
+
+# Stream Editor (sed) Trick: Finds a specific string and replaces it inline inside the file.
+sed -i 's/sam/ram/g' file1.txt  # Changes every instance of "sam" to "ram" inside file1.txt.
+
+# Tee Command Trick: Pipes data and writes it to multiple files simultaneously without overwriting them.
+# Output example: /home/user/Documents
