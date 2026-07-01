@@ -1,37 +1,21 @@
 # 🐧 My Linux Fundamentals Journey
 
-I have started learning Linux fundamentals, and this repository is my personal log. I have documented everything exactly how I understood it—keeping it simple, practical, and crash-course style!
+I have started learning Linux fundamentals, and this repository is my personal log. I have documented everything I learned today—history, architecture, commands, and operators—all compiled directly into this single master sheet.
 
 ---
 
-## 🏛️ 1. History of Linux (Introduction)
+## 🏛️ Linux Core Fundamentals, Commands & Operators Master-Log
 
-### What is Unix?
-* Unix is the oldest and most historic Operating System (developed in 1970 at AT&T's Bell Labs).
-* It is literally the **"ancestor"** of modern operating systems like Linux and macOS.
-* It is **Closed Source** (commercial companies own it and sell its license).
+### 1. The Core Architecture (Unix, Linux & Kernels)
+* **The Unix Ancestry:** Developed in 1970 at AT&T's Bell Labs, Unix is the "ancestor" of modern OS platforms like Linux and macOS. It is a proprietary, closed-source system.
+* **The Linux Reality:** Linux is NOT a complete Operating System; it is technically a **Kernel** (the core engine). First released by **Linus Torvalds** on **September 17, 1991**, it is open-source, fast, and secure because bugs get patched by the global community within hours.
+* **Distributions (Distros):** A distribution is a full OS built by putting software tools on top of the Linux Kernel. Examples include **Ubuntu** (super lightweight, runs on just **512MB RAM**) and **Kali Linux** (pre-packed with ethical hacking tools).
+* **Linux vs Windows Kernels:** Linux uses a **Monolithic Kernel** where hardware drivers and core tasks run inside the kernel space (extremely fast). Windows uses a closed-source **NT (Hybrid) Kernel** which splits tasks between user and kernel modes, making it heavier and more resource-intensive.
 
-### What is Linux? (The Big Myth)
-* **The biggest fact:** Linux is NOT a complete Operating System! Technically, it is just a **Kernel** (the main core engine of an OS).
-* It was first released by **Linus Torvalds** on **September 17, 1991**.
-* **Linux-Based OS (Distros):** When you combine the Linux kernel with other tools and a graphical interface, it becomes a full OS called a *Distribution (Distro)*.
-  * **Ubuntu:** Super beginner-friendly and lightweight. It can easily run on just **512MB of RAM**! (Way lighter than Windows).
-  * **Kali Linux:** Specifically built for ethical hacking and penetration testing, packed with pre-installed tools.
-
----
-
-## ⚙️ 2. Under the Hood: Linux vs Windows
-
-Every OS relies on its core engine, known as the Kernel:
-
-* **Linux (Monolithic Kernel):** All major tasks and hardware drivers run directly inside the kernel space, making it super-fast and lightweight. Plus, it is **Open Source**—thousands of developers inspect the code daily, meaning security bugs get patched within hours.
-* **Windows (NT Kernel):** NT stands for *New Technology*. It uses a **Hybrid Kernel**, which is heavier and demands more RAM to run smoothly. It is closed source (only Microsoft has the code).
-
----
-
-## 💻 3. Complete CLI Cheat-Sheet (Navigation, Search, Redirection & Operators)
+### 2. Complete CLI Cheat-Sheet (Navigation, Search, Redirection & Operators)
 Here is the entire breakdown of every command and operator I practiced, compiled together into a single execution guide:
 
+```bash
 # ==========================================
 # PART A: DIRECTORY NAVIGATION & BASIC CLI
 # ==========================================
@@ -91,4 +75,4 @@ echo "ram" >> file1.txt
 sed -i 's/sam/ram/g' file1.txt  # Changes every instance of "sam" to "ram" inside file1.txt.
 
 # Tee Command Trick: Pipes data and writes it to multiple files simultaneously without overwriting them.
-# Output example: /home/user/Documents
+echo "sam" | tee -a file1.txt file2.txt  # Appends "sam" to both file1 and file2 at the exact same time.
