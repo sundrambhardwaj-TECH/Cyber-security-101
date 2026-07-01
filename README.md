@@ -1,4 +1,4 @@
 # My Cyber Security 101 Journey 🚀
 
 Welcome to my learning repository! You can find my chapter notes here:
-* [Chapter 1: Search Skills](search-skills.md)
+* [Chapter 1: Search Skills](Search-Skills.md)
