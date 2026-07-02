@@ -22,6 +22,5 @@ In this module, I learned how information gathering and OSINT (Open Source Intel
 * **Concept:** The `man` (Manual) tool is the built-in user manual in Linux. 
 * **Usage:** Typing `man <command>` (like `man ls`) displays the complete documentation and flags for that specific command.
 * **Quick Tip:** Press `q` to exit the manual interface.
-
 ---
 *Documented by me as part of my continuous learning path.*
