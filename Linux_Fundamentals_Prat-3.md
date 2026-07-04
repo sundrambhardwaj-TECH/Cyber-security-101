@@ -160,7 +160,7 @@ Used to manage background processes (Daemons) that start when the system boots u
 Used to schedule scripts or commands to run automatically at specific times.
 
 Syntax (M-H-DOM-M-DOW):
-Minute | Hour | Day of Month | Month | Day of Week
+<pre translate="no">
 .---------------- minute (0 - 59)
 |  .------------- hour (0 - 23)
 |  |  .---------- day of month (1 - 31)
@@ -168,6 +168,7 @@ Minute | Hour | Day of Month | Month | Day of Week
 |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7)
 |  |  |  |  |
 *  *  *  *  *  /path/to/command
+</pre> 
               
 * Edit Jobs: crontab -e
 * List Jobs: crontab -l
